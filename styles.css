@@ -1,0 +1,98 @@
+:root {
+  --nepal-red: #c8102e;
+  --nepal-blue: #003893;
+  --paper: #fffaf6;
+  --ink: #141414;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(160deg, #ffdbe2, #e8efff 60%, #d6e8ff);
+  color: var(--ink);
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+}
+
+.app {
+  width: min(480px, 100%);
+  background: var(--paper);
+  border-radius: 16px;
+  border: 3px solid var(--nepal-blue);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  padding: 12px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+h1 {
+  margin: 6px 0;
+  font-size: clamp(1.2rem, 3.8vw, 1.7rem);
+  color: var(--nepal-red);
+}
+
+.install-btn,
+.restart-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.install-btn {
+  background: var(--nepal-blue);
+}
+
+.restart-btn {
+  background: var(--nepal-red);
+}
+
+.hud {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+  padding: 8px 0;
+  font-weight: 700;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  border: 3px solid var(--nepal-red);
+  border-radius: 10px;
+  background: linear-gradient(#fbe5e8, #f0f5ff);
+  touch-action: none;
+}
+
+.instructions {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.instructions h2 {
+  margin: 0 0 6px;
+  color: var(--nepal-blue);
+  font-size: 1rem;
+}
+
+.instructions ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.instructions li + li {
+  margin-top: 4px;
+}
