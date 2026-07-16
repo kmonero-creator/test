@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battle for the Bed: Nepal Valentine Showdown</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header>
+        <h1>🛏️ Battle for the Bed 💘</h1>
+        <p class="subtitle">A playful 2-player Nepal Valentine showdown</p>
+      </header>
+
+      <section class="hud">
+        <article class="fighter-card">
+          <h2>Player 1: Himalayan Heart</h2>
+          <p>Health: <span id="p1-health">100</span></p>
+          <p>Ammo: <span id="p1-ammo">6</span></p>
+          <button id="p1-shoot">Shoot</button>
+          <button id="p1-reload">Reload</button>
+        </article>
+
+        <article class="fighter-card">
+          <h2>Player 2: Kathmandu Cupid</h2>
+          <p>Health: <span id="p2-health">100</span></p>
+          <p>Ammo: <span id="p2-ammo">6</span></p>
+          <button id="p2-shoot">Shoot</button>
+          <button id="p2-reload">Reload</button>
+        </article>
+      </section>
+
+      <section class="arena" aria-live="polite">
+        <div class="flag-row">
+          <span>🇳🇵</span>
+          <span>💌</span>
+          <span>🇳🇵</span>
+        </div>
+        <div class="bed">🛏️ Valentine Bed</div>
+        <p id="turn">Turn: Himalayan Heart</p>
+        <p id="message">Tap Shoot or Reload to begin!</p>
+        <button id="restart" class="restart">Restart Match</button>
+      </section>
+
+      <section class="controls">
+        <h3>How to play</h3>
+        <ul>
+          <li>Players take turns.</li>
+          <li>Each shot uses 1 ammo and deals random damage (10-25).</li>
+          <li>Reload refills ammo to 6 but ends your turn.</li>
+          <li>First player to reduce the rival to 0 health wins the bed.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
